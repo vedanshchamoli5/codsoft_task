@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a2e;
+  font-family: system-ui, sans-serif;
+}
+
+.calculator {
+  background: #16213e;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #0f0f23;
+  color: #eee;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 65px);
+  gap: 10px;
+}
+
+button {
+  height: 65px;
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #1f4068;
+  color: #fff;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #2a5a8a;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Operator buttons */
+button:nth-child(4n) {
+  background: #e94560;
+}
+
+button:nth-child(4n):hover {
+  background: #ff6b8a;
+}
+
+/* Clear button */
+button:first-child {
+  background: #ff9f1c;
+  color: #1a1a2e;
+}
+
+button:first-child:hover {
+  background: #ffb347;
+}
+
+/* Zero spans two columns */
+.zero {
+  grid-column: span 2;
+}
+
+/* Equals button */
+button:last-child {
+  background: #4ecca3;
+  color: #1a1a2e;
+}
+
+button:last-child:hover {
+  background: #6fe8bc;
+}
